@@ -2,10 +2,9 @@
 Final project for the Building AI course
 
 ## Summary
+Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length!
+
 The idea is to create a large language model similar to Open.Ai but focused on medicine. It should be used to support the making of diagnosis and writting of journal entries, and messages to patients and colleagues. The model needs to be trained on the lates medicine research, journals, and other relevant data. 
-
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
-
 
 ## Background
 
@@ -24,57 +23,37 @@ Some problems it can solve:
 Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
 The solution should be a combined journal and admin system with a large language model, primarly used by health providers like medical doctors, nurses, and medical lab workers. I focus on doctors and they should use it througout their work. 
 
-
-
-Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
+Situations of use:
+* After a doctor has met a patient they enter the reported symptoms into the AI to get help in making a correct diagnosis. The AI will suggest possible diagnosis and which tests to take. Tests are most likely taken by nurses who also put information into the AI. Advanced tests are analysed at labs, and information is add to the AI by lab workers. The doctor gets the results of the tests and the AI updates suggested possible diagnosis and says if further tests are needed. The doctor uses the output of the model as a support to make a final diagnosis and informs the patient. The doctor puts the diagnosis into the patients journal with speech-to-text function.
+* Any time information is put into the system a speech-to-text function is used, any minor errors can be adjusted immidiately by changing the text which is put on the screen in front of the person. This means clerical staff might be replaced. 
 
 
 ## Data sources and AI methods
 Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
+This AI solution would need to be co-developed with the health authorities, and they would need to provide most of the data. 
+Data sources:
+* Journals of patients. 
+* Internal documents.
+* Messages to patients.
+* Highly-reliable medical research articles, for example, peer-reviewed litterature studies in respected academic journals. 
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+Methods:
+Word-to-speech translation to enter information into the AI. 
+Large language model to write texts.
+Neural networks used to guess diagnosis.
 
 ## Challenges
 
 What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+Surely there are some limitations to this solution, and the biggest is like the ethical consideration. I don't know if it is ethically okay to train the AI on sensitive information like journals and messages sent by patients and healthcare workers. Hopefully this can be resolved by all information being anonymous or ensuring that no human will read the training data.
+Hallucination and error in diagnosis, the AI will not guess diagnose perfectly. Trusting the AI blindly is a bad idea! Doctors should only see it as a support to remember which tests to take and which possible unlike diagnosis (which could be forgotten) it could be. This challenge should be solved by instructing doctors how to use the software and what its limitations are. 
+
+
 
 ## What next?
 
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
-
+How could your project grow and become something even more? What kind of skills, what kind of assistance would you need to move on? 
+Well, I just made this up, it feels far off that I will take this project forward. But I guess I would need some skilled programmers, someone with insight into the available data in the healthcare system, and contacts with the big guys making the decisions in healthcare.
 
 ## Acknowledgments
 
-* list here the sources of inspiration 
-* do not use code, images, data etc. from others without permission
-* when you have permission to use other people's materials, always mention the original creator and the open source / Creative Commons licence they've used
-  <br>For example: [Sleeping Cat on Her Back by Umberto Salvagnin](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg#filelinks) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* etc
